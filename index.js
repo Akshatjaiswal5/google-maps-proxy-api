@@ -1,7 +1,9 @@
 const express = require('express');
 const axios = require('axios');
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 const port = 3000 || process.env.PORT;
 
 const apiKey = process.env.GOOGLE_MAPS_API_KEY;
