@@ -11,8 +11,8 @@ const apiKey = process.env.GOOGLE_MAPS_API_KEY;
 // Proxy for Geocode API
 app.get('/maps/api/geocode/json', async (req, res) => {
   try {
-    const address = req.query.address;
-    const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${apiKey}`;
+    const latlng = req.query.latlng;
+    const url = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latlng}&key=${apiKey}`;
 
     const response = await axios.get(url);
     res.json(response.data);
