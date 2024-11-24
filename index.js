@@ -22,7 +22,7 @@ app.get('/maps/api/geocode/json/geocode', async (req, res) => {
 });
 
 // Proxy for Nearby Search API
-app.get('/nearbysearch/maps/api/place/json', async (req, res) => {
+app.get('maps/api/place/nearbysearch/json', async (req, res) => {
   try {
     const location = req.query.location;
     const radius = req.query.radius || 50000; 
