@@ -9,7 +9,7 @@ const port = 3000 || process.env.PORT;
 const apiKey = process.env.GOOGLE_MAPS_API_KEY;
 
 // Proxy for Geocode API
-app.get('/maps/api/geocode/json/geocode', async (req, res) => {
+app.get('/maps/api/geocode/json', async (req, res) => {
   try {
     const address = req.query.address;
     const url = `https://maps.googleapis.com/maps/api/geocode/json?address=${address}&key=${apiKey}`;
